@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <section>
+        <nav>
+            <div class="logo">
+                <h1>Shoe<span>s</span></h1>
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Servises">Servises</a></li>
+            </ul>
+
+            <div class="icons">
+                <i class="fa-solid fa-heart"></i>
+                <div class="cart-icon" style="position: relative; display: inline-block; cursor: pointer;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span> <!-- عداد السلة -->
+                </div>
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <!-- زرار الموبايل (الهامبرجر) -->
+            <div class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text reveal">
+                    <h1>NIKE<br><span>Collection</span></h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                        a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+                <div class="main_image reveal">
+                    <img src="image/logshoes.png">
+                </div>
+            </div>
+            <div class="social_icon">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="button reveal">
+                <a href="#Products">SHOP NOW</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section (Dynamic) -->
+    <div class="products" id="Products">
+        <h1 class="reveal">Products</h1>
+
+        <!-- شريط البحث -->
+        <div class="reveal" style="text-align: center; margin-bottom: 30px;">
+            <input type="text" id="search-input" placeholder="Search for shoes..." 
+                   style="padding: 10px; width: 300px; border-radius: 20px; border: 1px solid #ccc; outline: none;">
+        </div>
+
+        <!-- كونتينر المنتجات (يتم تعبئته بالجافاسكريبت) -->
+        <div class="box reveal" id="product-container">
+            <!-- المنتجات هتظهر هنا أوتوماتيك -->
+        </div>
+    </div>
+
+
+    <!-- About Section -->
+    <div class="about" id="About">
+        <h1 class="reveal">Web<span>About</span></h1>
+
+        <div class="about_main reveal">
+            <div class="about_image">
+                <div class="about_small_image">
+                    <img src="image/red_shoes1.png" onclick="functio(this)">
+                    <img src="image/red_shoes2.png" onclick="functio(this)">
+                    <img src="image/red_shoes3.png" onclick="functio(this)">
+                    <img src="image/red_shoes4.png" onclick="functio(this)">
+                </div>
+
+                <div class="image_contaner">
+                    <img src="image/red_shoes1.png" id="imagebox">
+                </div>
+            </div>
+
+            <div class="about_text">
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical 
+                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at 
+                    Hampden-Sydney College in Virginia, discovered the undoubtable source.
+                </p>
+            </div>
+        </div>
+
+        <a href="#" class="about_btn reveal">Shop Now</a>
+    </div>
+
+
+    <!-- Review Section -->
+    <div class="review" id="Review">
+        <h1 class="reveal">Customer's<span>review</span></h1>
+        
+        <div class="review_box reveal">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="image/girl_dp1.jpg">
+                        </div>
+                        <div class="name">
+                            <strong>Ranidi Lochana</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum architecto ipsum vero nulla.</p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="image/man_dp1.jpg">
+                        </div>
+                        <div class="name">
+                            <strong>Sayuru Tharanga</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum architecto ipsum vero nulla.</p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+                        <div class="profile_image">
+                            <img src="image/man_dp2.jpg">
+                        </div>
+                        <div class="name">
+                            <strong>Senuda Dilwan</strong>
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum architecto ipsum vero nulla.</p>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+
+    <!-- Services Section -->
+    <div class="services" id="Servises">
+        <h1 class="reveal">our<span>services</span></h1>
+
+        <div class="services_cards reveal">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Login Form -->
+    <div class="login_form">
+        <div class="left reveal">
+            <img src="image/shoes.png" style="width: 550px;">
+        </div>
+
+        <div class="right reveal">
+            <h1>Welcome Back!</h1>
+            <form action="#" method="post">
+                <p>User Name</p>
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="user" placeholder="User Name" class="username">
+                </div>
+                <p class="passworg_tag">Password</p>
+                <div class="password">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" name="password" placeholder="Password">
+                </div>
+                <p class="forget">Forget Password ?</p>
+                <button type="submit">Login</button>
+                <div class="loging_icon">
+                    <a href="#"><img src="image/google.png"></a>
+                    <a href="#"><img src="image/facebook.png"></a>
+                    <a href="#"><img src="image/twitter.png"></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Contact</h1>
+                <a href="#"><i class="fa-solid fa-house"></i>123/Colombo/Sri Lanka</a>
+                <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i>contact@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Get Help</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Shipping</a>
+                <a href="#" class="center">Returns</a>
+                <a href="#" class="center">Payment Options</a>
+            </div>
+
+            <div class="tag">
+                <h1>Our Stores</h1>
+                <a href="#" class="center">Sri Lanka</a>
+                <a href="#" class="center">USA</a>
+                <a href="#" class="center">India</a>
+                <a href="#" class="center">Japan</a>
+            </div>
+
+            <div class="tag">
+                <h1>Follw Us</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>                    
+                </div>
+            </div>
+
+            <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                    <input type="text" placeholder="You email id here">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================== EXTRAS (Modals, Toasts, Buttons) ================== -->
+
+    <!-- زرار الصعود للأعلى -->
+    <a href="#" class="scroll-top" id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- رسالة التنبيه المخفية -->
+    <div id="toast">Added to Cart Successfully! ✅</div>
+
+    <!-- نافذة تفاصيل المنتج (Modal) -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-left">
+                <img id="modal-img" src="" alt="Shoe Image">
+            </div>
+            <div class="modal-right">
+                <h2 id="modal-title">Product Name</h2>
+                <h3 id="modal-price">$0.00</h3>
+                <p id="modal-desc">Description goes here...</p>
+                <div class="sizes-container">
+                    <p>Select Size:</p>
+                    <div class="sizes-grid">
+                        <span class="size-box">38</span>
+                        <span class="size-box">39</span>
+                        <span class="size-box selected">40</span>
+                        <span class="size-box">41</span>
+                        <span class="size-box">42</span>
+                    </div>
+                </div>
+                <button class="btn" onclick="addToCart(event)" style="margin-top: 20px; width: 100%;">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================== JAVASCRIPT LOGIC ================== -->
+    <script>
+        // 1. Mobile Menu Logic
+        const toggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector("nav ul");
+
+        toggle.onclick = () => {
+            toggle.classList.toggle("active");
+            menu.classList.toggle("show");
+        };
+
+        // 2. Scroll To Top Button Logic
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            // Scroll Button
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "flex";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+            // Trigger Reveal Animation
+            reveal(); 
+        };
+
+        scrollBtn.onclick = function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+
+        // 3. Products Data (Database)
+        const productsData = [
+            { id: 1, name: "NIKE Air Max", desc: "Lorem ipsum dolor sit amet consectetur.", price: 100.99, image: "image/shoes1.png", rating: 5 },
+            { id: 2, name: "NIKE Jordan", desc: "Best shoes for running and sports.", price: 200.99, image: "image/shoes2.png", rating: 4.5 },
+            { id: 3, name: "NIKE Running", desc: "Comfortable and stylish for daily use.", price: 175.99, image: "image/shoes3.png", rating: 3.5 },
+            { id: 4, name: "NIKE Sport", desc: "Amazing design with high quality materials.", price: 120.99, image: "image/shoes4.png", rating: 4 },
+            { id: 5, name: "NIKE Casual", desc: "Perfect for casual wear and outings.", price: 150.99, image: "image/shoes5.png", rating: 5 },
+            { id: 6, name: "NIKE Pro", desc: "Professional shoes for athletes.", price: 220.99, image: "image/shoes6.png", rating: 4.5 },
+            { id: 7, name: "NIKE Lite", desc: "Lightweight shoes for maximum speed.", price: 110.99, image: "image/shoes.png", rating: 3 },
+            { id: 8, name: "NIKE Classic", desc: "Classic look that never gets old.", price: 150.99, image: "image/shoes7.png", rating: 4.5 }
+        ];
+
+        // 4. Helper: Get Stars HTML
+        function getStars(rating) {
+            let stars = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= rating) {
+                    stars += '<i class="fa-solid fa-star"></i>';
+                } else if (i === Math.ceil(rating) && !Number.isInteger(rating)) {
+                    stars += '<i class="fa-solid fa-star-half-stroke"></i>';
+                } else {
+                    stars += '<i class="fa-regular fa-star"></i>';
+                }
+            }
+            return stars;
+        }
+
+        // 5. Display Products Function
+        const productContainer = document.getElementById('product-container');
+
+        function displayProducts(productsList) {
+            productContainer.innerHTML = '';
+            if (productsList.length === 0) {
+                productContainer.innerHTML = '<h3 style="grid-column: 1/-1; text-align:center; color:red;">No Products Found!</h3>';
+                return;
+            }
+            productsList.forEach(product => {
+                const cardHTML = `
+                    <div class="card">
+                        <div class="small_card">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="image" onclick="openModal(${product.id})" style="cursor: pointer;">
+                            <img src="${product.image}" alt="${product.name}">
+                        </div>
+                        <div class="products_text">
+                            <h2 onclick="openModal(${product.id})" style="cursor: pointer; font-size: 20px; margin-top:5px;">${product.name}</h2>
+                            <p>${product.desc}</p>
+                            <h3>$${product.price}</h3>
+                            <div class="products_star" onclick="openModal(${product.id})">
+                                ${getStars(product.rating)}
+                            </div>
+                            <a href="#" class="btn" onclick="addToCart(event)">Add To Cart</a>
+                        </div>
+                    </div>
+                `;
+                productContainer.innerHTML += cardHTML;
+            });
+        }
+        
+        // Initial Call
+        displayProducts(productsData);
+
+        // 6. Search Logic
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('keyup', (e) => {
+            const searchText = e.target.value.toLowerCase();
+            const filteredProducts = productsData.filter(product => {
+                return product.name.toLowerCase().includes(searchText);
+            });
+            displayProducts(filteredProducts);
+        });
+
+        // 7. Cart & Toast Logic
+        let count = 0;
+        const cartCount = document.getElementById('cart-count');
+        const toast = document.getElementById('toast');
+
+        function addToCart(e) {
+            e.preventDefault();
+            count++;
+            cartCount.innerText = count;
+            
+            // Cart Animation
+            cartCount.style.transform = "scale(1.2)";
+            setTimeout(() => cartCount.style.transform = "scale(1)", 200);
+
+            // Toast Notification
+            toast.innerText = "Added to Cart Successfully! ✅";
+            toast.style.borderLeft = "5px solid #c3f305";
+            showToast();
+        }
+
+        function showToast() {
+            toast.className = "show";
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+        }
+
+        // 8. Modal Logic (Popup)
+        const modal = document.getElementById('product-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalPrice = document.getElementById('modal-price');
+        const modalDesc = document.getElementById('modal-desc');
+
+        function openModal(id) {
+            const product = productsData.find(p => p.id === id);
+            if(product) {
+                modalImg.src = product.image;
+                modalTitle.innerText = product.name;
+                modalPrice.innerText = "$" + product.price;
+                modalDesc.innerText = product.desc;
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Modal Size Selection
+        const sizeBoxes = document.querySelectorAll('.size-box');
+        sizeBoxes.forEach(box => {
+            box.addEventListener('click', function() {
+                sizeBoxes.forEach(b => b.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // 9. About Section Image Switcher
+        function functio(small){
+            var full = document.getElementById("imagebox");
+            full.src = small.src;
+        }
+
+        // 10. Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+                if (revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        // Init reveal
+        reveal();
+
+        // 11. Wishlist / Heart Logic (Delegation)
+        document.getElementById('product-container').addEventListener('click', function(e) {
+            if (e.target.classList.contains('fa-heart')) {
+                e.target.classList.toggle('active-heart');
+                if (e.target.classList.contains('active-heart')) {
+                    toast.innerText = "Added to Wishlist! ❤️";
+                    toast.style.borderLeft = "5px solid red";
+                    showToast();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
